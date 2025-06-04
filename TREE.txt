@@ -1,0 +1,72 @@
+TREE:
+
+class Node:
+    def __init__(self):
+        self.left = None
+        self.right = None
+        self.data = None
+    def inorder_traversal(self,Node):
+        if Node:
+            self.inorder_traversal(Node.left)
+            print(Node.data)
+            self.inorder_traversal(Node.right)
+    def preorder_traversal(self,Node):
+        if Node:
+            print(Node.data, end=" ")
+            self.preorder_traversal(Node.left)
+            self.preorder_traversal(Node.right)
+    def postorder_traversal(self,Node):
+        if Node:
+            self.postorder_traversal(Node.left)
+            self.postorder_traversal(Node.right) 
+            print(Node.data)
+    def sum_of_nodes(self,Node):
+        if Node is None:
+            return 0
+        return Node.data+self.sum_of_nodes(Node.left)+self.sum_of_nodes(Node.right)
+    def count_nodes(self,Node):
+        if Node is None:
+            return 0
+        return 1 + self.count_nodes(Node.left) + self.count_nodes(Node.right)
+    def count_leaf_nodes(self,Node):
+        if Node is None:
+            return 1
+        return self.count_leaf_nodes(Node.left) + self.count_leaf_nodes(Node.right)
+    def height(self,Node):
+        if Node is None:
+            return 0
+        else:
+            return max(self.height(Node.left)),max(self.height(self.right)) + 1
+        
+
+tree = Node()       #inserting data in root
+tree.data = 1
+tree.left = Node()    #inserting data in right
+tree.left.data = 2
+tree.right = Node()   #inserting data in right
+tree.right.data = 3
+tree.left.left = Node()    #inserting data in right
+tree.left.left.data = 4     
+tree.inorder_traversal(Node=tree)
+tree.preorder_traversal(Node=tree)
+tree.postorder_traversal(Node=tree)
+print("\nsum of all Nodes in binary tree is:")
+print(tree.sum_of_nodes(Node=tree))
+print("\nsum of all nodes in left subtree is:")
+print(tree.sum_of_nodes(Node=tree.left))
+print("\nsum of all nodes in right subtree is:")
+print(tree.sum_of_nodes(Node=tree.right))
+print("\n number of nodes in left subtree:")
+print(tree.count_nodes(Node=tree.left))
+print("\n number of nodes in right subtree:")
+print(tree.count_nodes(Node=tree.right))
+print("\n number of nodes in tree:")
+print(tree.count_nodes(Node=tree))
+print("\n number of leaf nodes in tree:")
+print(tree.count_leaf_nodes(Node=tree))
+print(tree.height(Node=tree))
+
+
+
+
+
