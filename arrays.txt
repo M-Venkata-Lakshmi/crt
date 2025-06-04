@@ -1,0 +1,53 @@
+pivot: 36
+left sub array [23]
+right sub array []
+equal array []
+pivot: 36
+left sub array [23]
+right sub array [63]
+equal array []
+pivot: 36
+left sub array [23]
+right sub array [63, 57]
+equal array []
+pivot: 36
+left sub array [23, 12]
+right sub array [63, 57]
+equal array []
+pivot: 36
+left sub array [23, 12]
+right sub array [63, 57, 45]
+equal array []
+pivot: 36
+left sub array [23, 12]
+right sub array [63, 57, 45]
+equal array [36]
+pivot: 12
+left sub array []
+right sub array [23]
+equal array []
+pivot: 12
+left sub array []
+right sub array [23]
+equal array [12]
+pivot: 45
+left sub array []
+right sub array [63]
+equal array []
+pivot: 45
+left sub array []
+right sub array [63, 57]
+equal array []
+pivot: 45
+left sub array []
+right sub array [63, 57]
+equal array [45]
+pivot: 57
+left sub array []
+right sub array [63]
+equal array []
+pivot: 57
+left sub array []
+right sub array [63]
+equal array [57]
+[12, 23, 36, 45, 57, 63]
